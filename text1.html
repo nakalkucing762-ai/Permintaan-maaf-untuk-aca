@@ -1,0 +1,1493 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Untuk Kamu Aca 💗</title>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&family=Patrick+Hand&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    min-height:100vh;
+    font-family:'DM Sans',sans-serif;
+    color:#663449;
+    overflow-x:hidden;
+
+    background:
+        radial-gradient(circle at 10% 10%,#ffd9e8 0 8%,transparent 25%),
+        radial-gradient(circle at 90% 20%,#ffe9f2 0 10%,transparent 28%),
+        linear-gradient(135deg,#fff5f9,#ffddeb,#fff8fb);
+}
+
+
+/* =========================
+   FLOATING BUBBLES
+========================= */
+
+.bubbles{
+    position:fixed;
+    inset:0;
+    overflow:hidden;
+    pointer-events:none;
+    z-index:0;
+}
+
+.bubble{
+    position:absolute;
+    bottom:-100px;
+    border-radius:50%;
+
+    background:
+        radial-gradient(circle at 30% 25%,
+        rgba(255,255,255,.9) 0 8%,
+        rgba(255,255,255,.2) 15%,
+        rgba(255,143,184,.35) 55%,
+        rgba(255,255,255,.05) 75%);
+
+    border:1px solid rgba(255,255,255,.7);
+
+    box-shadow:
+        inset -5px -7px 15px rgba(255,105,160,.15),
+        0 8px 25px rgba(217,93,139,.08);
+
+    animation:rise linear infinite;
+}
+
+.b1{width:70px;height:70px;left:5%;animation-duration:15s;}
+.b2{width:35px;height:35px;left:18%;animation-duration:10s;animation-delay:2s;}
+.b3{width:100px;height:100px;left:33%;animation-duration:18s;animation-delay:4s;}
+.b4{width:45px;height:45px;left:55%;animation-duration:12s;animation-delay:1s;}
+.b5{width:80px;height:80px;left:72%;animation-duration:17s;animation-delay:3s;}
+.b6{width:30px;height:30px;left:88%;animation-duration:11s;animation-delay:5s;}
+
+@keyframes rise{
+
+    0%{
+        transform:translateY(0) translateX(0) rotate(0deg);
+        opacity:0;
+    }
+
+    10%{
+        opacity:.8;
+    }
+
+    50%{
+        transform:translateY(-50vh) translateX(25px) rotate(120deg);
+    }
+
+    100%{
+        transform:translateY(-115vh) translateX(-30px) rotate(250deg);
+        opacity:0;
+    }
+}
+
+
+/* =========================
+   SPARKLES
+========================= */
+
+.sparkle{
+    position:fixed;
+    z-index:1;
+    pointer-events:none;
+
+    color:white;
+    font-size:18px;
+
+    text-shadow:0 0 10px #ff8fb8;
+
+    animation:twinkle 2s infinite ease-in-out;
+}
+
+.s1{top:12%;left:8%;}
+.s2{top:28%;right:10%;animation-delay:.7s;}
+.s3{top:55%;left:5%;animation-delay:1.2s;}
+.s4{top:75%;right:7%;animation-delay:.4s;}
+.s5{top:90%;left:18%;animation-delay:1.6s;}
+
+@keyframes twinkle{
+
+    0%,100%{
+        transform:scale(.7) rotate(0deg);
+        opacity:.3;
+    }
+
+    50%{
+        transform:scale(1.3) rotate(20deg);
+        opacity:1;
+    }
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+main{
+    position:relative;
+    z-index:2;
+
+    width:min(720px,92%);
+    margin:auto;
+
+    padding-bottom:80px;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    min-height:100vh;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:40px 10px;
+}
+
+.mini-pill{
+    background:rgba(255,255,255,.7);
+
+    border:1px solid white;
+
+    padding:9px 18px;
+
+    border-radius:50px;
+
+    font-size:12px;
+    color:#c85b85;
+
+    box-shadow:0 8px 25px rgba(217,93,139,.12);
+
+    backdrop-filter:blur(10px);
+
+    margin-bottom:22px;
+}
+
+.hero h1{
+    font-family:'Playfair Display',serif;
+
+    font-size:clamp(42px,11vw,78px);
+
+    line-height:1.05;
+
+    color:#663449;
+}
+
+.hero h1 span{
+    color:#e66f9d;
+}
+
+.hero p{
+    max-width:530px;
+
+    margin-top:20px;
+
+    line-height:1.8;
+
+    font-size:15px;
+
+    color:#946176;
+}
+
+.hero-bubble{
+    width:130px;
+    height:130px;
+
+    border-radius:50%;
+
+    margin-top:35px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:
+        radial-gradient(circle at 30% 25%,
+        white 0 6%,
+        rgba(255,255,255,.5) 12%,
+        transparent 20%),
+        linear-gradient(145deg,#ffb5d0,#ff82b1);
+
+    box-shadow:
+        inset -15px -15px 30px rgba(197,59,112,.15),
+        inset 10px 10px 20px rgba(255,255,255,.6),
+        0 20px 50px rgba(217,93,139,.2);
+
+    animation:floatBubble 3s ease-in-out infinite;
+}
+
+.hero-bubble span{
+    font-size:50px;
+}
+
+@keyframes floatBubble{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-14px) rotate(3deg);
+    }
+}
+
+
+/* =========================
+   SECTION
+========================= */
+
+section{
+    margin:55px 0;
+}
+
+.section-label{
+    text-align:center;
+
+    font-size:11px;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+    color:#d46c94;
+
+    margin-bottom:14px;
+}
+
+.section-title{
+    text-align:center;
+
+    font-family:'Playfair Display',serif;
+
+    font-size:32px;
+
+    margin-bottom:25px;
+}
+
+
+/* =========================
+   STORY
+========================= */
+
+.story{
+    background:rgba(255,255,255,.72);
+
+    border:1px solid rgba(255,255,255,.95);
+
+    border-radius:38px;
+
+    padding:32px 25px;
+
+    box-shadow:
+        0 20px 50px rgba(217,93,139,.12),
+        inset 0 1px 0 white;
+
+    backdrop-filter:blur(15px);
+}
+
+.story p{
+    line-height:1.9;
+
+    font-size:15px;
+
+    margin-bottom:18px;
+}
+
+.story p:last-child{
+    margin-bottom:0;
+}
+
+.highlight{
+    color:#df648f;
+    font-weight:700;
+}
+
+
+/* =========================
+   CHAT
+========================= */
+
+.chat-area{
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+}
+
+.chat{
+    max-width:82%;
+
+    padding:17px 20px;
+
+    border-radius:25px;
+
+    line-height:1.6;
+
+    font-size:14px;
+
+    box-shadow:0 10px 25px rgba(217,93,139,.1);
+}
+
+.chat.left{
+    align-self:flex-start;
+
+    background:white;
+
+    border-bottom-left-radius:7px;
+}
+
+.chat.right{
+    align-self:flex-end;
+
+    color:white;
+
+    background:linear-gradient(135deg,#ff91ba,#e86d9d);
+
+    border-bottom-right-radius:7px;
+}
+
+.chat.middle{
+    align-self:center;
+
+    background:#fff1f6;
+
+    text-align:center;
+
+    font-family:'Patrick Hand',cursive;
+
+    font-size:19px;
+
+    color:#c65c83;
+}
+
+
+/* =========================
+   BIG BUBBLE
+========================= */
+
+.big-bubble{
+    min-height:340px;
+
+    border-radius:50%;
+
+    padding:65px 45px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    background:
+        radial-gradient(circle at 30% 20%,rgba(255,255,255,.9),transparent 16%),
+        linear-gradient(145deg,#ffb7d1,#ff82b1);
+
+    box-shadow:
+        inset -25px -30px 50px rgba(201,64,119,.14),
+        inset 20px 20px 30px rgba(255,255,255,.5),
+        0 25px 70px rgba(217,93,139,.2);
+
+    animation:softFloat 4s ease-in-out infinite;
+}
+
+@keyframes softFloat{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-8px);
+    }
+}
+
+.big-bubble h2{
+    font-family:'Playfair Display',serif;
+
+    color:white;
+
+    font-size:34px;
+
+    margin-bottom:18px;
+}
+
+.big-bubble p{
+    max-width:430px;
+
+    color:#fff8fb;
+
+    line-height:1.8;
+
+    font-size:14px;
+}
+
+
+/* =========================
+   SHIRT MEMORY
+========================= */
+
+.shirt-memory{
+    position:relative;
+
+    overflow:hidden;
+
+    text-align:center;
+
+    padding:45px 28px 35px;
+
+    border-radius:38px;
+
+    background:
+        radial-gradient(circle at 50% 0%,
+        rgba(255,255,255,.95),
+        transparent 35%),
+        linear-gradient(145deg,#fff8fb,#ffe5ef);
+
+    border:1px solid rgba(255,255,255,.95);
+
+    box-shadow:
+        0 25px 60px rgba(217,93,139,.15),
+        inset 0 1px 0 white;
+
+    backdrop-filter:blur(15px);
+}
+
+.shirt-glow{
+    position:absolute;
+
+    width:180px;
+    height:180px;
+
+    top:-70px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    background:#ff9fc2;
+
+    filter:blur(60px);
+
+    opacity:.22;
+
+    border-radius:50%;
+}
+
+.shirt-icon{
+    position:relative;
+
+    z-index:2;
+
+    width:125px;
+    height:125px;
+
+    margin:0 auto 25px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    font-size:60px;
+
+    background:
+        radial-gradient(circle at 30% 25%,
+        white 0 7%,
+        rgba(255,255,255,.5) 15%,
+        transparent 25%),
+        linear-gradient(145deg,#ffb7d1,#ff82b1);
+
+    box-shadow:
+        inset 10px 10px 20px rgba(255,255,255,.65),
+        inset -15px -15px 25px rgba(197,59,112,.12),
+        0 18px 40px rgba(217,93,139,.18);
+
+    animation:shirtFloat 3s ease-in-out infinite;
+}
+
+@keyframes shirtFloat{
+
+    0%,100%{
+        transform:translateY(0) rotate(0deg);
+    }
+
+    50%{
+        transform:translateY(-9px) rotate(3deg);
+    }
+}
+
+.shirt-memory h3{
+    position:relative;
+
+    z-index:2;
+
+    font-family:'Playfair Display',serif;
+
+    font-size:27px;
+
+    color:#663449;
+
+    margin-bottom:18px;
+}
+
+.shirt-memory p{
+    position:relative;
+
+    z-index:2;
+
+    max-width:500px;
+
+    margin:0 auto 15px;
+
+    font-size:14px;
+
+    line-height:1.9;
+
+    color:#8f6073;
+}
+
+.shirt-memory p span{
+    color:#df648f;
+
+    font-weight:700;
+}
+
+.shirt-divider{
+    position:relative;
+
+    z-index:2;
+
+    margin:22px auto;
+
+    width:45px;
+    height:45px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:#fff;
+
+    color:#e66f9d;
+
+    font-size:22px;
+
+    box-shadow:0 8px 20px rgba(217,93,139,.12);
+}
+
+.shirt-bottom{
+    position:relative;
+
+    z-index:2;
+
+    margin-top:25px;
+
+    padding:15px 18px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:9px;
+
+    border-radius:25px;
+
+    background:rgba(255,255,255,.65);
+
+    color:#c85b85;
+
+    font-size:13px;
+}
+
+.shirt-bottom strong{
+    color:#df648f;
+}
+
+.shirt-sparkle{
+    position:absolute;
+
+    top:45px;
+    right:27%;
+
+    color:#ff8fb8;
+
+    font-size:22px;
+
+    animation:shirtTwinkle 1.8s infinite;
+}
+
+.shirt-sparkle.s-left{
+    top:110px;
+    left:18%;
+
+    animation-delay:.5s;
+}
+
+.shirt-sparkle.s-right{
+    top:170px;
+    right:13%;
+
+    animation-delay:1s;
+}
+
+@keyframes shirtTwinkle{
+
+    0%,100%{
+        opacity:.25;
+        transform:scale(.7) rotate(0deg);
+    }
+
+    50%{
+        opacity:1;
+        transform:scale(1.3) rotate(20deg);
+    }
+}
+
+
+/* =========================
+   FUN BUBBLES
+========================= */
+
+.fun-zone{
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:18px;
+}
+
+.fun-bubble{
+    width:145px;
+    height:145px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    padding:20px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    box-shadow:
+        inset 8px 8px 18px rgba(255,255,255,.7),
+        inset -10px -10px 20px rgba(0,0,0,.04),
+        0 15px 30px rgba(217,93,139,.1);
+
+    transition:.3s;
+}
+
+.fun-bubble:hover{
+    transform:translateY(-8px) rotate(3deg);
+}
+
+.pink{
+    background:#ffb1cc;
+}
+
+.yellow{
+    background:#ffe8a9;
+}
+
+.green{
+    background:#c9efd9;
+}
+
+.lilac{
+    background:#dfd0ff;
+}
+
+
+/* =========================
+   NOTE
+========================= */
+
+.note{
+    background:#fffafc;
+
+    border-radius:30px;
+
+    padding:30px 25px;
+
+    border:1px solid #ffe0ec;
+
+    box-shadow:0 15px 40px rgba(217,93,139,.08);
+}
+
+.note p{
+    font-family:'Patrick Hand',cursive;
+
+    font-size:23px;
+
+    line-height:1.7;
+
+    color:#8e526d;
+}
+
+
+/* =========================
+   SECRET
+========================= */
+
+.secret{
+    text-align:center;
+
+    padding:40px 20px;
+}
+
+.secret button{
+    border:0;
+
+    padding:15px 27px;
+
+    border-radius:50px;
+
+    background:linear-gradient(135deg,#ff91ba,#e76b9b);
+
+    color:white;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    box-shadow:0 12px 30px rgba(217,93,139,.2);
+
+    transition:.3s;
+}
+
+.secret button:hover{
+    transform:translateY(-3px);
+}
+
+.hidden-message{
+    max-height:0;
+
+    overflow:hidden;
+
+    opacity:0;
+
+    transition:.8s ease;
+}
+
+.hidden-message.show{
+    max-height:500px;
+
+    opacity:1;
+
+    margin-top:25px;
+}
+
+.hidden-message div{
+    background:white;
+
+    padding:25px;
+
+    border-radius:30px;
+
+    line-height:1.8;
+
+    box-shadow:0 15px 35px rgba(217,93,139,.1);
+}
+
+
+/* =========================
+   FINAL
+========================= */
+
+.final{
+    text-align:center;
+
+    padding:50px 20px 80px;
+}
+
+.final-heart{
+    font-size:70px;
+
+    animation:heartBeat 1.5s infinite;
+}
+
+@keyframes heartBeat{
+
+    0%,100%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.12);
+    }
+}
+
+.final h2{
+    font-family:'Playfair Display',serif;
+
+    font-size:35px;
+
+    margin:15px 0;
+}
+
+.final p{
+    line-height:1.9;
+
+    color:#8f6073;
+
+    font-size:14px;
+}
+
+
+/* =========================
+   REVEAL
+========================= */
+
+.reveal{
+    opacity:0;
+
+    transform:translateY(35px);
+
+    transition:1s ease;
+}
+
+.reveal.active{
+    opacity:1;
+
+    transform:translateY(0);
+}
+
+
+footer{
+    text-align:center;
+
+    font-size:11px;
+
+    color:#b77b92;
+
+    padding-bottom:30px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:500px){
+
+    .story{
+        padding:27px 20px;
+    }
+
+    .big-bubble{
+        min-height:300px;
+
+        padding:55px 35px;
+    }
+
+    .big-bubble h2{
+        font-size:29px;
+    }
+
+    .fun-bubble{
+        width:125px;
+        height:125px;
+
+        font-size:12px;
+    }
+
+    .shirt-memory{
+        padding:38px 21px 28px;
+    }
+
+    .shirt-memory h3{
+        font-size:24px;
+    }
+
+    .shirt-bottom{
+        font-size:12px;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- FLOATING BUBBLES -->
+
+<div class="bubbles">
+
+    <div class="bubble b1"></div>
+    <div class="bubble b2"></div>
+    <div class="bubble b3"></div>
+    <div class="bubble b4"></div>
+    <div class="bubble b5"></div>
+    <div class="bubble b6"></div>
+
+</div>
+
+
+<!-- SPARKLES -->
+
+<div class="sparkle s1">✦</div>
+<div class="sparkle s2">✧</div>
+<div class="sparkle s3">✦</div>
+<div class="sparkle s4">✧</div>
+<div class="sparkle s5">✦</div>
+
+
+<main>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="mini-pill">
+        💗 sedikit sesuatu dari aku
+    </div>
+
+    <h1>
+        Untuk <span>Kamu</span>
+    </h1>
+
+    <p>
+        Aku sebenarnya nggak terlalu pintar menyusun kata-kata.
+        Tapi kali ini aku mau mencoba ngomong dari hati,
+        karena ada beberapa hal yang memang harus aku sampaikan.
+    </p>
+
+    <div class="hero-bubble">
+        <span>💗</span>
+    </div>
+
+</section>
+
+
+<!-- PEMBUKA -->
+
+<section class="reveal">
+
+    <div class="section-label">
+        pelan-pelan ya
+    </div>
+
+    <h2 class="section-title">
+        Aku mau jujur...
+    </h2>
+
+    <div class="story">
+
+        <p>
+            Pertama-tama, aku mau minta maaf.
+            Maaf kalau selama ini ada sikap atau perkataanku
+            yang bikin kamu kecewa, bikin kamu sedih,
+            atau bahkan bikin kamu merasa kalau perasaanmu
+            nggak cukup aku hargai.
+        </p>
+
+        <p>
+            Aku sadar, mungkin ada beberapa hal yang menurutku
+            sepele, tapi ternyata buat kamu punya arti yang besar.
+            Dan aku seharusnya bisa lebih peka terhadap itu.
+            Aku seharusnya lebih banyak mendengarkan,
+            bukan malah membuat semuanya terasa semakin berat.
+        </p>
+
+        <p>
+            Aku nggak mau mencari alasan untuk membenarkan diriku sendiri.
+            Kalau memang aku salah, ya aku salah.
+            Dan aku benar-benar minta maaf karena sudah membuat kamu
+            merasa nggak nyaman dengan sikapku.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- TENTANG HP -->
+
+<section class="reveal">
+
+    <div class="section-label">
+        aku juga sadar
+    </div>
+
+    <h2 class="section-title">
+        Tentang hal yang kemarin...
+    </h2>
+
+    <div class="chat-area">
+
+        <div class="chat left">
+            Aku sadar aku salah karena membuka HP kamu tanpa izin.
+        </div>
+
+        <div class="chat right">
+            Apalagi sampai melihat sesuatu yang sebenarnya
+            bukan hakku untuk aku lihat.
+        </div>
+
+        <div class="chat left">
+            Aku nggak mau pura-pura seolah itu bukan masalah.
+            Karena aku tahu privasi itu penting.
+        </div>
+
+        <div class="chat middle">
+            Kadang rasa penasaran memang nggak boleh menang
+            dari rasa percaya.
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PENJELASAN -->
+
+<section class="reveal">
+
+    <div class="story">
+
+        <p>
+            Aku juga tahu aku seharusnya lebih menghargai ruang pribadi kamu.
+            Kepercayaan itu bukan cuma tentang percaya satu sama lain,
+            tapi juga tentang tahu batas dan menghormati batas tersebut.
+        </p>
+
+        <p>
+            Jadi untuk hal itu, aku benar-benar minta maaf.
+            Aku nggak berharap kamu langsung melupakan semuanya,
+            karena aku tahu perasaan nggak bisa dipaksa untuk langsung baik-baik saja.
+        </p>
+
+        <p>
+            Yang bisa aku lakukan adalah belajar dari kesalahan itu
+            dan berusaha supaya ke depannya aku bisa lebih menghargai
+            kamu, perasaanmu, dan privasimu.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- BAJU -->
+
+<section class="reveal">
+
+    <div class="section-label">
+        oh iya...
+    </div>
+
+    <h2 class="section-title">
+        Tentang baju yang kamu kasih 🤍
+    </h2>
+
+    <div class="shirt-memory">
+
+        <div class="shirt-glow"></div>
+
+        <div class="shirt-icon">
+            👕
+        </div>
+
+        <div class="shirt-sparkle">
+            ✦
+        </div>
+
+        <div class="shirt-sparkle s-left">
+            ✧
+        </div>
+
+        <div class="shirt-sparkle s-right">
+            ✦
+        </div>
+
+        <h3>
+            Bukan cuma soal bajunya...
+        </h3>
+
+        <p>
+            Aku suka banget sama baju yang kamu kasih.
+            Tapi sebenarnya yang bikin baju itu terasa spesial
+            bukan cuma karena model atau warnanya.
+        </p>
+
+        <p>
+            Ada sesuatu yang lebih sederhana dari itu...
+            <span>karena baju itu datang dari kamu.</span>
+        </p>
+
+        <div class="shirt-divider">
+            ♡
+        </div>
+
+        <p>
+            Jadi setiap kali aku lihat atau pakai baju itu,
+            rasanya seperti ada sedikit cerita tentang kamu
+            yang ikut menemani aku.
+        </p>
+
+        <div class="shirt-bottom">
+
+            <span>👕</span>
+            <span>+</span>
+            <span>💗</span>
+            <span>=</span>
+
+            <strong>
+                sesuatu yang berarti
+            </strong>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- WAKTU -->
+
+<section class="reveal">
+
+    <div class="section-label">
+        satu lagi
+    </div>
+
+    <h2 class="section-title">
+        Maaf karena sering bikin kamu menunggu
+    </h2>
+
+    <div class="big-bubble">
+
+        <h2>
+            Aku sadar sekarang.
+        </h2>
+
+        <p>
+            Aku sering menunda-nunda waktu.
+            Kadang bilang nanti, sebentar lagi,
+            atau masih ada yang harus dilakukan.
+            Sampai akhirnya kamu menunggu terlalu lama.
+        </p>
+
+        <p style="margin-top:15px;">
+            Dan tanpa sadar, kamu yang harus menanggung
+            rasa kecewa dan sedihnya.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- PENJELASAN WAKTU -->
+
+<section class="reveal">
+
+    <div class="story">
+
+        <p>
+            Aku tahu mungkin dari sisiku kelihatannya sederhana.
+            Tapi kalau aku berada di posisi kamu,
+            mungkin aku juga akan merasa nggak enak
+            kalau terus-terusan dibuat menunggu.
+        </p>
+
+        <p>
+            Aku minta maaf karena belum bisa menghargai waktu kamu
+            seperti seharusnya.
+            Kamu sudah meluangkan waktu,
+            tapi aku malah sering membuat kamu menunggu.
+        </p>
+
+        <p>
+            Aku nggak mau cuma bilang "maaf"
+            lalu semuanya kembali seperti biasa.
+            Aku ingin benar-benar belajar dari hal ini.
+            Kalau aku sudah bilang akan meluangkan waktu,
+            aku harus berusaha menepatinya.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- FUN BUBBLE -->
+
+<section class="reveal">
+
+    <div class="section-label">
+        biar nggak terlalu serius
+    </div>
+
+    <h2 class="section-title">
+        Sedikit bubble random 💕
+    </h2>
+
+    <div class="fun-zone">
+
+        <div class="fun-bubble pink">
+            Aku suka baju itu 👕
+        </div>
+
+        <div class="fun-bubble yellow">
+            Aku masih belajar jadi lebih peka 🙏
+        </div>
+
+        <div class="fun-bubble green">
+            sering-sering bikin aku kangen
+        </div>
+
+        <div class="fun-bubble lilac">
+            Tapi kalau boleh jujur...
+            aku kangen banget.
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- NOTE -->
+
+<section class="reveal">
+
+    <div class="note">
+
+        <p>
+            Aku mungkin nggak selalu tahu cara menunjukkan
+            kalau aku peduli.
+            Kadang caraku malah salah,
+            kadang waktuku juga nggak tepat,
+            dan kadang aku baru sadar setelah semuanya terjadi.
+        </p>
+
+        <p style="margin-top:18px;">
+            Tapi bukan berarti aku nggak peduli.
+            Aku cuma masih harus banyak belajar
+            bagaimana caranya menghargai seseorang
+            yang memang berarti buat aku.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- SECRET -->
+
+<section class="secret reveal">
+
+    <div class="section-label">
+        ada satu pesan kecil
+    </div>
+
+    <h2 class="section-title">
+        Mau buka? 👀
+    </h2>
+
+    <button onclick="openSecret()" id="secretBtn">
+        Buka 💗
+    </button>
+
+    <div class="hidden-message" id="secretMessage">
+
+        <div>
+
+            <p>
+                Kalau sampai sekarang kamu masih membaca ini,
+                berarti kamu sudah sampai sejauh ini. 🙏
+            </p>
+
+            <p style="margin-top:15px;">
+                Jadi aku cuma mau bilang sekali lagi:
+                <strong>maaf ya.</strong>
+            </p>
+
+            <p style="margin-top:15px;">
+                Terima kasih karena sudah pernah memberikan waktu,
+                perhatian, cerita, dan bahkan memberikan aku sesuatu
+                yang sampai sekarang aku suka.
+            </p>
+
+            <p style="margin-top:15px;">
+                Dan kalau akhir-akhir ini aku kelihatan seperti
+                orang yang nggak peka...
+                mungkin memang aku harus banyak belajar lagi.
+            </p>
+
+            <p style="margin-top:15px;">
+                Tapi satu hal yang pasti,
+                aku nggak pernah bermaksud membuat kamu sedih.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FINAL -->
+
+<section class="final reveal">
+
+    <div class="final-heart">
+        💗
+    </div>
+
+    <h2>
+        Terima kasih sudah membaca.
+    </h2>
+
+    <p>
+        Aku nggak minta semuanya langsung baik-baik saja.
+        Aku cuma ingin kamu tahu kalau aku sadar dengan kesalahanku,
+        aku menghargai perasaanmu,
+        dan aku ingin belajar menjadi seseorang yang lebih baik
+        dalam menghargai kamu.
+    </p>
+
+    <p style="margin-top:20px;">
+        Maaf untuk semua waktu yang pernah aku buat kamu tunggu.
+        Maaf karena pernah membuat kamu kecewa.
+        Maaf karena pernah melewati batas privasimu.
+        Dan terima kasih untuk semua hal baik yang pernah kamu kasih.
+    </p>
+
+    <p style="margin-top:20px;">
+        Oh iya...
+        bajunya aku suka.
+        Dan kalau ditanya sekarang...
+        <strong>aku masih kangen. 🤍</strong>
+    </p>
+
+</section>
+
+
+<footer>
+    dibuat dengan sedikit rasa bersalah,
+    banyak rasa sayang,
+    dan bubble pink 💗
+</footer>
+
+
+</main>
+
+
+<script>
+
+
+/* =========================
+   SECRET MESSAGE
+========================= */
+
+function openSecret(){
+
+    const message =
+        document.getElementById("secretMessage");
+
+    const button =
+        document.getElementById("secretBtn");
+
+    message.classList.toggle("show");
+
+    if(message.classList.contains("show")){
+
+        button.innerHTML =
+            "Dibaca ya sayang 💗";
+
+    }else{
+
+        button.innerHTML =
+            "Buka 💗";
+
+    }
+
+}
+
+
+/* =========================
+   SCROLL REVEAL
+========================= */
+
+const reveals =
+    document.querySelectorAll(".reveal");
+
+
+const observer =
+    new IntersectionObserver(
+
+        entries => {
+
+            entries.forEach(entry => {
+
+                if(entry.isIntersecting){
+
+                    entry.target.classList.add("active");
+
+                }
+
+            });
+
+        },
+
+        {
+            threshold:.12
+        }
+
+    );
+
+
+reveals.forEach(el =>
+    observer.observe(el)
+);
+
+
+</script>
+
+</body>
+</html> 
